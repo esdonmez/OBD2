@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="horizontal"
+    tools:context="com.example.seray.carstore.StartActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="left">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f5a935"
+            android:text="Engine Speed"
+            android:id="@+id/engineSpeedButton"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="10dp"
+            android:width="150dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f5a935"
+            android:text="Oxygen"
+            android:id="@+id/oxygenButton"
+            android:layout_marginBottom="3dp"
+            android:width="150dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f5a935"
+            android:text="Fuel Amount"
+            android:id="@+id/fuelAmountButton"
+            android:layout_marginBottom="3dp"
+            android:width="150dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f5a935"
+            android:text="Carbon Dioxide"
+            android:id="@+id/carbonDioxideButton"
+            android:layout_marginBottom="3dp"
+            android:width="150dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f5a935"
+            android:text="Engine Temperature"
+            android:id="@+id/engineTemperatureButton"
+            android:layout_marginBottom="3dp"
+            android:width="150dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f5a935"
+            android:text="Engine Oil Temperature"
+            android:id="@+id/engineOilTemperatureButton"
+            android:layout_marginBottom="3dp"
+            android:width="150dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f5a935"
+            android:textSize="20dp"
+            android:text="GPS"
+            android:id="@+id/gpsButton"
+            android:layout_marginBottom="3dp"
+            android:width="150dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="right">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="top|right"
+                android:layout_marginBottom="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Timer : "
+                    android:id="@+id/timerText"
+                    android:layout_gravity="top|right"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time"
+                    android:layout_gravity="right"/>
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#f5a935"
+                android:text="Control"
+                android:id="@+id/controlButton"
+                android:layout_gravity="center_horizontal"
+                android:width="110dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#e65858"
+                android:text="Finish Testing"
+                android:id="@+id/stopButton"
+                android:layout_gravity="center_horizontal"
+                android:width="110dp"
+                android:layout_marginTop="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom|right"
+            android:layout_marginTop="130dp"
+            android:layout_marginLeft="30dp">
+
+            <pl.pawelkleczkowski.customgauge.CustomGauge
+                android:id="@+id/gauge1"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp"
+                gauge:pointStartColor="#e65858"
+                gauge:pointEndColor="#e65858"
+                gauge:pointSize="6"
+                gauge:startAngel="135"
+                gauge:strokeCap="ROUND"
+                gauge:strokeColor="#9e9d9d"
+                gauge:strokeWidth="10dp"
+                gauge:startValue="0"
+                gauge:endValue="260"
+                gauge:sweepAngel="270"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/gauge1"
+                android:layout_gravity="center_horizontal"
+                android:text="256"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-110dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
